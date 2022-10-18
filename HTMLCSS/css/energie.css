@@ -1,0 +1,26 @@
+body, .list-group-item, .nav-link {
+    color: antiquewhite;
+    background-color: dimgrey;
+    border-color: antiquewhite;
+}
+
+h1{
+    text-align: center;
+    background-color: burlywood;
+    color: dimgrey;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.selected{
+    background-color: cadetblue;
+}
+
+.list-group-item-heading{
+    background-color: burlywood;
+    color: dimgrey;
+}
+
+section{
+    margin: 10px;
+}
