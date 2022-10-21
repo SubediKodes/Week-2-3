@@ -18,7 +18,18 @@ function vulmeterList(){
     for (let meter of meterList){
         li = document.createElement('li')
         li.setAttribute('class','list-group-item')
+        var img = document.createElement('img')
+            img.src = meter.img_src
+            img.style.height = '24px'
+        li.appendChild(img)
         li.appendChild(document.createTextNode(meter.text))
+        var sp = document.createElement('span')
+            sp.setAttribute('class', 'badge p-2 rounded-circle bg-success');
+        li.appendChild(sp)
+        var btn = document.createElement('button');
+            btn.setAttribute('class','btn btn-outline-danger');
+            btn.innerText = 'Verbind'
+        li.appendChild(btn)
         ul.appendChild(li)
     }
     
@@ -30,13 +41,19 @@ function vulToestelLijst(){
         li = document.createElement('li')
         li.setAttribute('class','list-group-item')
         var img = document.createElement('img')
-        img.src = toestel.img_src
-        img.style.height = '14px'
+            img.src = toestel.img_src
+            img.style.height = '14px'
         li.appendChild(img)
         li.appendChild(document.createTextNode(toestel.text))
         ul.appendChild(li)
     }
-    
+}
+
+function clickk(){
+    let item = document.getElementsByName('list-group-item')
+    for (let l of item){
+        l.addEventListener('mouseover')
+    }
 }
 
 vulmeterList()
