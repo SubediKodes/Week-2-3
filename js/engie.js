@@ -54,7 +54,7 @@ function selectToestel(event){
     let item = event.target;
     item.classList.add("selected");
     let title = document.getElementById("toestel")
-    title.textContent = item.getAttribute("id");
+    title.textContent = "Verbruik " + item.getAttribute("id");
 
     let id = sessionStorage["geselecteerd"]
     if( id != undefined){
@@ -64,7 +64,6 @@ function selectToestel(event){
     sessionStorage["geselecteerd"] = item.getAttribute("id");
 
 }
-
 
 vulmeterList()
 vulToestelLijst()
