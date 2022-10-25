@@ -52,14 +52,9 @@ function vulToestelLijst(){
 function selectToestel(event){
     let item = event.target;
     item.classList.add("selected");
+    //lkdjsdksjdn
 }
 
-function clickonlist(){
-    let item = document.getElementsByName('list-group-item')
-    for (let l of item){
-        l.addEventListener('mouseover')
-    }
-}
 
 vulmeterList()
 vulToestelLijst()
