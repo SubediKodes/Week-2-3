@@ -55,6 +55,14 @@ function selectToestel(event){
     item.classList.add("selected");
     let title = document.getElementById("toestel")
     title.textContent = item.getAttribute("id");
+
+    let id = sessionStorage["geselecteerd"]
+    if( id != undefined){
+        let vorigItem = document.getElementById(id);
+        vorigItem.classList.remove("selected");
+    }
+    sessionStorage["geselecteerd"] = item.getAttribute("id");
+
 }
 
 
