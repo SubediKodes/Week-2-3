@@ -44,6 +44,7 @@ function vulToestelLijst(){
             img.style.height = '14px'
         li.appendChild(img)
         li.appendChild(document.createTextNode(toestel.text))
+        li.setAttribute("id",toestel.text)
         li.addEventListener('click',selectToestel)
         ul.appendChild(li)
     }
@@ -52,7 +53,8 @@ function vulToestelLijst(){
 function selectToestel(event){
     let item = event.target;
     item.classList.add("selected");
-    //lkdjsdksjdn
+    let title = document.getElementById("toestel")
+    title.textContent = item.getAttribute("id");
 }
 
 
