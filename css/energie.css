@@ -21,6 +21,6 @@ h1{
     color: dimgrey;
 }
 
-section{
+img, button, section, span {
     margin: 10px;
 }

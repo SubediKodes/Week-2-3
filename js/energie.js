@@ -14,10 +14,9 @@ var toestelList = [
 
 function vulmeterList(){
     let ul = document.getElementById('meterlist');
-    let li = document.getElementById('meter')
     for (let meter of meterList){
         li = document.createElement('li')
-        li.setAttribute('class','list-group-item')
+        li.setAttribute('class','list-group-item') 
         var img = document.createElement('img')
             img.src = meter.img_src
             img.style.height = '24px'
@@ -25,6 +24,7 @@ function vulmeterList(){
         li.appendChild(document.createTextNode(meter.text))
         var sp = document.createElement('span')
             sp.setAttribute('class', 'badge p-2 rounded-circle bg-success');
+            sp.textContent = "\u00A0";
         li.appendChild(sp)
         var btn = document.createElement('button');
             btn.setAttribute('class','btn btn-outline-danger');
@@ -36,7 +36,6 @@ function vulmeterList(){
 }
 function vulToestelLijst(){
     let ul = document.getElementById('toestellist');
-    let li = document.getElementById('toestel')
     for (let toestel of toestelList){
         li = document.createElement('li')
         li.setAttribute('class','list-group-item')
